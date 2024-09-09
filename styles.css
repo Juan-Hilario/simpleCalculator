@@ -10,19 +10,38 @@ body {
   margin: 0 auto;
   width: 650px;
   height: 814px;
-
+  border: solid 2px #5f5959;
   border-radius: 49px;
 
   /* add blur to box-shadow */
   background-blend-mode: normal;
-  box-shadow: 14px 17px 4px rgba(100, 100, 100, 0.5);
+
   background-color: #4e64c6;
-  /* background-color: white; */
+
   display: grid;
   grid-template-areas:
     "screen screen screen"
     "nums operators1 operators2";
   justify-items: center;
+}
+.calcBody::before {
+  margin: 0 auto;
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -5;
+  background: #4255a9;
+  border-radius: inherit;
+
+  width: 650px;
+  height: 814px;
+
+  /* box-shadow: 14px 17px 4px rgba(100, 100, 100, 0.5); */
+  box-shadow: 0 0 0 2px #5f5959, 8px 3px rgba(100, 100, 100, 0.5);
+  transform: translate3d(10px, 10px, -1px);
 }
 @font-face {
   font-family: "DS Digital";
@@ -32,7 +51,7 @@ body {
 .calcScreen {
   width: 507px;
   height: 295px;
-  margin: 10px auto 0 auto;
+  margin: 10px auto 75px auto;
   font-size: 50px;
   font-family: "DS Digital";
 
@@ -50,7 +69,6 @@ body {
 button {
   cursor: pointer;
   /* box-shadow: 8px 2px rgba(100, 100, 100, 0.5); */
-  border: transparent;
   font-family: "Karla";
   font-size: 50px;
   border: solid 2px #5f5959;
