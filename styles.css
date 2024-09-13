@@ -1,359 +1,383 @@
 /* Universal */
 body {
-  background-color: hwb(44 69% 15%);
+    background-color: hwb(44 69% 15%);
 }
 
 /* Breadcrumbs */
 
 /* Main */
 .calcBody {
-  margin: 0 auto;
-  width: 650px;
-  height: 814px;
-  border: solid 2px #5f5959;
-  border-radius: 49px;
+    margin: 0 auto;
+    width: 650px;
+    height: 814px;
+    border: solid 2px #5f5959;
+    border-radius: 49px;
 
-  /* add blur to box-shadow */
-  background-blend-mode: normal;
+    /* add blur to box-shadow */
+    background-blend-mode: normal;
 
-  background-color: #4e64c6;
+    background-color: #4e64c6;
 
-  display: grid;
-  grid-template-areas:
-    "screen screen screen"
-    "nums operators1 operators2";
-  justify-items: center;
+    display: grid;
+    grid-template-areas:
+        "screen screen screen"
+        "nums operators1 operators2";
+    justify-items: center;
 }
 .calcBody::before {
-  margin: 0 auto;
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -5;
-  background: #4255a9;
-  border-radius: inherit;
+    margin: 0 auto;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -5;
+    background: #4255a9;
+    border-radius: inherit;
 
-  width: 650px;
-  height: 814px;
+    width: 650px;
+    height: 814px;
 
-  /* box-shadow: 14px 17px 4px rgba(100, 100, 100, 0.5); */
-  box-shadow: 0 0 0 2px #5f5959, 8px 3px rgba(100, 100, 100, 0.5);
-  transform: translate3d(10px, 10px, -1px);
+    /* box-shadow: 14px 17px 4px rgba(100, 100, 100, 0.5); */
+    box-shadow: 0 0 0 2px #5f5959, 8px 3px rgba(100, 100, 100, 0.5);
+    transform: translate3d(10px, 10px, -1px);
 }
 @font-face {
-  font-family: "DS Digital";
-  src: url(assets/fonts/DS-DIGI.TTF);
+    font-family: "DS Digital";
+    src: url(assets/fonts/DS-DIGI.TTF);
 }
 /* Need Custom Scroll */
 .calcScreen {
-  width: 507px;
-  height: 295px;
-  margin: 10px auto 75px auto;
-  font-size: 50px;
-  font-family: "DS Digital";
+    width: 507px;
+    height: 295px;
+    margin: 10px auto 75px auto;
+    font-size: 50px;
+    font-family: "DS Digital";
 
-  border: 22px rgba(206, 239, 235, 0.3) solid;
-  background-clip: padding-box;
+    border: 22px rgba(206, 239, 235, 0.3) solid;
+    background-clip: padding-box;
 
-  background-color: #c2c5d3;
+    background-color: #c2c5d3;
 
-  overflow-y: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 
-  position: relative;
-  top: 20px;
-  grid-area: screen;
+    position: relative;
+    top: 20px;
+    grid-area: screen;
+
+    display: grid;
+    grid-auto-flow: rows;
+    gap: 0;
+}
+
+.inputField {
+    height: 50px;
+    width: 507px;
+    font-size: 50px;
+    font-family: inherit;
+    background-color: #acb0c3;
+    border: none;
+    border-bottom: dotted rgba(192, 236, 249, 0.759);
+}
+.inputField:focus {
+    outline: none;
+}
+.answer {
+    background-color: rgba(98, 204, 206, 0.446);
+    height: 50px;
+
+    border-bottom: dotted rgb(192, 236, 249);
 }
 button {
-  cursor: pointer;
-  /* box-shadow: 8px 2px rgba(100, 100, 100, 0.5); */
-  font-family: "Karla";
-  font-size: 50px;
-  border: solid 2px #5f5959;
+    cursor: pointer;
+    /* box-shadow: 8px 2px rgba(100, 100, 100, 0.5); */
+    font-family: "Karla";
+    font-size: 50px;
+    border: solid 2px #5f5959;
 }
 
 .btnNums {
-  display: grid;
-  grid-template-columns: repeat(3, 64px);
-  grid-template-rows: repeat(4, 64px);
-  gap: 18px 18px;
+    display: grid;
+    grid-template-columns: repeat(3, 64px);
+    grid-template-rows: repeat(4, 64px);
+    gap: 18px 18px;
 
-  /* height: 400px;
+    /* height: 400px;
   width: 300px; */
 
-  /* position: relative;
+    /* position: relative;
   top: 70px;
   left: 50px; */
-  /* justify-content: center; */
-  grid-area: nums;
+    /* justify-content: center; */
+    grid-area: nums;
 }
 
 @font-face {
-  font-family: "Karla";
-  src: url("assets/fonts/Karla-VariableFont_wght.ttf/");
+    font-family: "Karla";
+    src: url("assets/fonts/Karla-VariableFont_wght.ttf/");
 }
 
 .btn1 {
-  cursor: pointer;
-  height: 64px;
-  width: 64px;
+    cursor: pointer;
+    height: 64px;
+    width: 64px;
 
-  border-radius: 50%;
-  border-color: #5f5959;
-  background-color: #ef8282;
-  background-blend-mode: normal;
-  touch-action: manipulation;
-  transform-style: preserve-3d;
+    border-radius: 50%;
+    border-color: #5f5959;
+    background-color: #ef8282;
+    background-blend-mode: normal;
+    touch-action: manipulation;
+    transform-style: preserve-3d;
 }
 .btn1::before {
-  position: absolute;
-  content: "";
-  width: 64px;
-  height: 64px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #b96161;
-  border-radius: inherit;
+    position: absolute;
+    content: "";
+    width: 64px;
+    height: 64px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #b96161;
+    border-radius: inherit;
 
-  box-shadow: 0 0 0 2px #5f5959, 8px 3px rgba(100, 100, 100, 0.5);
-  transform: translate3d(2px, 0, -1px);
-  /*   transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+    box-shadow: 0 0 0 2px #5f5959, 8px 3px rgba(100, 100, 100, 0.5);
+    transform: translate3d(2px, 0, -1px);
+    /*   transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
 } */
 }
 .btn1:hover {
-  background: #ed7373;
-  transform: translate(1px, 2px);
+    background: #ed7373;
+    transform: translate(1px, 2px);
 }
 .btn1:hover::before {
-  box-shadow: 0 0 0 2px #5f5959, 6px 1px rgba(100, 100, 100, 0.5);
-  transform: translate3d(0px, -1px, -1px);
+    box-shadow: 0 0 0 2px #5f5959, 6px 1px rgba(100, 100, 100, 0.5);
+    transform: translate3d(0px, -1px, -1px);
 }
 .btn1:active {
-  background: #ed7373;
-  transform: translate(2px, 3px);
+    background: #ed7373;
+    transform: translate(2px, 3px);
 }
 .btn1:active::before {
-  box-shadow: 0 0 0 0px #5f5959, 5px 1px rgba(100, 100, 100, 0.5);
-  transform: translate3d(-2px, -2px, -1px);
+    box-shadow: 0 0 0 0px #5f5959, 5px 1px rgba(100, 100, 100, 0.5);
+    transform: translate3d(-2px, -2px, -1px);
 }
 
 .btnOperators1 {
-  grid-area: operators1;
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: auto;
-  grid-template-areas:
-    "delete add"
-    "clearAll add"
-    "clearEntry add"
-    "equals equals";
-  align-items: center;
-  justify-items: center;
-  height: 350px;
-  width: 200px;
+    grid-area: operators1;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+        "delete add"
+        "clearAll add"
+        "clearEntry add"
+        "equals equals";
+    align-items: center;
+    justify-items: center;
+    height: 350px;
+    width: 200px;
 }
 .btnOperators2 {
-  grid-area: operators2;
-  display: grid;
-  grid-template-areas:
-    "multiply"
-    "divide"
-    "subtract";
-  height: 320px;
-  align-items: center;
-  justify-items: center;
+    grid-area: operators2;
+    display: grid;
+    grid-template-areas:
+        "multiply"
+        "divide"
+        "subtract";
+    height: 320px;
+    align-items: center;
+    justify-items: center;
 }
 .smallOp {
-  width: 82px;
-  height: 55px;
-  border-radius: 18px;
-  background: #87db9d;
-  background-blend-mode: normal;
-  /*   box-shadow: 8px 2px 4px rgba(100, 100, 100, 0.5); */
-  touch-action: manipulation;
-  transform-style: preserve-3d;
+    width: 82px;
+    height: 55px;
+    border-radius: 18px;
+    background: #87db9d;
+    background-blend-mode: normal;
+    /*   box-shadow: 8px 2px 4px rgba(100, 100, 100, 0.5); */
+    touch-action: manipulation;
+    transform-style: preserve-3d;
 }
 .smallOp::before {
-  position: absolute;
-  content: "";
-  width: 82px;
-  height: 55px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #38bc5b;
-  border-radius: inherit;
+    position: absolute;
+    content: "";
+    width: 82px;
+    height: 55px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #38bc5b;
+    border-radius: inherit;
 
-  box-shadow: 0 0 0 2px #5f5959, 8px 3px rgba(100, 100, 100, 0.5);
-  transform: translate3d(2px, 0, -1px);
-  /*   transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+    box-shadow: 0 0 0 2px #5f5959, 8px 3px rgba(100, 100, 100, 0.5);
+    transform: translate3d(2px, 0, -1px);
+    /*   transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
 } */
 }
 .smallOp:hover {
-  background: #66d182;
-  transform: translate(1px, 2px);
+    background: #66d182;
+    transform: translate(1px, 2px);
 }
 .smallOp:hover::before {
-  box-shadow: 0 0 0 2px #5f5959, 6px 1px rgba(100, 100, 100, 0.5);
-  transform: translate3d(0px, -1px, -1px);
+    box-shadow: 0 0 0 2px #5f5959, 6px 1px rgba(100, 100, 100, 0.5);
+    transform: translate3d(0px, -1px, -1px);
 }
 .smallOp:active {
-  background: #66d182;
-  transform: translate(2px, 3px);
+    background: #66d182;
+    transform: translate(2px, 3px);
 }
 .smallOp:active::before {
-  box-shadow: 0 0 0 0px #5f5959, 5px 1px rgba(100, 100, 100, 0.5);
-  transform: translate3d(-2px, -2px, -1px);
+    box-shadow: 0 0 0 0px #5f5959, 5px 1px rgba(100, 100, 100, 0.5);
+    transform: translate3d(-2px, -2px, -1px);
 }
 
 .verticalOp {
-  width: 89px;
-  height: 203px;
-  border-radius: 24px;
-  background: #dfbd6c;
-  background-blend-mode: normal;
-  touch-action: manipulation;
-  transform-style: preserve-3d;
+    width: 89px;
+    height: 203px;
+    border-radius: 24px;
+    background: #dfbd6c;
+    background-blend-mode: normal;
+    touch-action: manipulation;
+    transform-style: preserve-3d;
 }
 .verticalOp::before {
-  position: absolute;
-  content: "";
-  width: 89px;
-  height: 203px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #d1a12e;
-  border-radius: inherit;
+    position: absolute;
+    content: "";
+    width: 89px;
+    height: 203px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #d1a12e;
+    border-radius: inherit;
 
-  box-shadow: 0 0 0 2px #5f5959, 8px 3px rgba(100, 100, 100, 0.5);
-  transform: translate3d(2px, 0, -1px);
+    box-shadow: 0 0 0 2px #5f5959, 8px 3px rgba(100, 100, 100, 0.5);
+    transform: translate3d(2px, 0, -1px);
 }
 .verticalOp:hover {
-  background: #d9b150;
-  transform: translate(1px, 2px);
+    background: #d9b150;
+    transform: translate(1px, 2px);
 }
 .verticalOp:hover::before {
-  box-shadow: 0 0 0 2px #5f5959, 6px 1px rgba(100, 100, 100, 0.5);
-  transform: translate3d(0px, -1px, -1px);
+    box-shadow: 0 0 0 2px #5f5959, 6px 1px rgba(100, 100, 100, 0.5);
+    transform: translate3d(0px, -1px, -1px);
 }
 .verticalOp:active {
-  background: #d9b150;
-  transform: translate(2px, 3px);
+    background: #d9b150;
+    transform: translate(2px, 3px);
 }
 .verticalOp:active::before {
-  box-shadow: 0 0 0 0px #5f5959, 5px 1px rgba(100, 100, 100, 0.5);
-  transform: translate3d(-2px, -2px, -1px);
+    box-shadow: 0 0 0 0px #5f5959, 5px 1px rgba(100, 100, 100, 0.5);
+    transform: translate3d(-2px, -2px, -1px);
 }
 
 .horizontalOp {
-  width: 188px;
-  height: 95px;
-  border-radius: 19px;
-  background: #76d5c7;
-  background-blend-mode: normal;
-  touch-action: manipulation;
-  transform-style: preserve-3d;
+    width: 188px;
+    height: 95px;
+    border-radius: 19px;
+    background: #76d5c7;
+    background-blend-mode: normal;
+    touch-action: manipulation;
+    transform-style: preserve-3d;
 }
 .horizontalOp::before {
-  position: absolute;
-  content: "";
-  width: 188px;
-  height: 95px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #3bc2ae;
-  border-radius: inherit;
+    position: absolute;
+    content: "";
+    width: 188px;
+    height: 95px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #3bc2ae;
+    border-radius: inherit;
 
-  box-shadow: 0 0 0 2px #5f5959, 8px 3px rgba(100, 100, 100, 0.5);
-  transform: translate3d(2px, 0, -1px);
+    box-shadow: 0 0 0 2px #5f5959, 8px 3px rgba(100, 100, 100, 0.5);
+    transform: translate3d(2px, 0, -1px);
 }
 .horizontalOp:hover {
-  background: #4fc9b7;
-  transform: translate(1px, 2px);
+    background: #4fc9b7;
+    transform: translate(1px, 2px);
 }
 .horizontalOp:hover::before {
-  box-shadow: 0 0 0 2px #5f5959, 6px 1px rgba(100, 100, 100, 0.5);
-  transform: translate3d(0px, -1px, -1px);
+    box-shadow: 0 0 0 2px #5f5959, 6px 1px rgba(100, 100, 100, 0.5);
+    transform: translate3d(0px, -1px, -1px);
 }
 .horizontalOp:active {
-  background: #4fc9b7;
-  transform: translate(2px, 3px);
+    background: #4fc9b7;
+    transform: translate(2px, 3px);
 }
 .horizontalOp:active::before {
-  box-shadow: 0 0 0 0px #5f5959, 5px 1px rgba(100, 100, 100, 0.5);
-  transform: translate3d(-2px, -2px, -1px);
+    box-shadow: 0 0 0 0px #5f5959, 5px 1px rgba(100, 100, 100, 0.5);
+    transform: translate3d(-2px, -2px, -1px);
 }
 .square {
-  width: 95px;
-  height: 96px;
-  border-radius: 24px;
-  background: #a56edf;
-  background-blend-mode: normal;
-  touch-action: manipulation;
-  transform-style: preserve-3d;
+    width: 95px;
+    height: 96px;
+    border-radius: 24px;
+    background: #a56edf;
+    background-blend-mode: normal;
+    touch-action: manipulation;
+    transform-style: preserve-3d;
 }
 .square::before {
-  position: absolute;
-  content: "";
-  width: 95px;
-  height: 96px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #7f31d2;
-  border-radius: inherit;
+    position: absolute;
+    content: "";
+    width: 95px;
+    height: 96px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #7f31d2;
+    border-radius: inherit;
 
-  box-shadow: 0 0 0 2px #5f5959, 8px 3px rgba(100, 100, 100, 0.5);
-  transform: translate3d(2px, 0, -1px);
+    box-shadow: 0 0 0 2px #5f5959, 8px 3px rgba(100, 100, 100, 0.5);
+    transform: translate3d(2px, 0, -1px);
 }
 .square:hover {
-  background: #8b45d6;
-  transform: translate(1px, 2px);
+    background: #8b45d6;
+    transform: translate(1px, 2px);
 }
 .square:hover::before {
-  box-shadow: 0 0 0 2px #5f5959, 6px 1px rgba(100, 100, 100, 0.5);
-  transform: translate3d(0px, -1px, -1px);
+    box-shadow: 0 0 0 2px #5f5959, 6px 1px rgba(100, 100, 100, 0.5);
+    transform: translate3d(0px, -1px, -1px);
 }
 .square:active {
-  background: #8b45d6;
-  transform: translate(2px, 3px);
+    background: #8b45d6;
+    transform: translate(2px, 3px);
 }
 .square:active::before {
-  box-shadow: 0 0 0 0px #5f5959, 5px 1px rgba(100, 100, 100, 0.5);
-  transform: translate3d(-2px, -2px, -1px);
+    box-shadow: 0 0 0 0px #5f5959, 5px 1px rgba(100, 100, 100, 0.5);
+    transform: translate3d(-2px, -2px, -1px);
 }
 
 #delete {
-  grid-area: delete;
+    grid-area: delete;
 }
 #add {
-  grid-area: add;
+    grid-area: add;
 }
 #clearAll {
-  grid-area: clearAll;
+    grid-area: clearAll;
 }
 #clearEntry {
-  grid-area: clearEntry;
+    grid-area: clearEntry;
 }
 #equals {
-  grid-area: equals;
+    grid-area: equals;
 }
 #multiply {
-  grid-area: multiply;
+    grid-area: multiply;
 }
 #divide {
-  grid-area: divide;
+    grid-area: divide;
 }
 #subtract {
-  grid-area: subtract;
+    grid-area: subtract;
 }
